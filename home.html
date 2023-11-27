@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed-The-Hungry-Hub</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"> <b style="color: #062bc1;"> Feed </b> The <b style="color: #4565e6;"> Hungry </b> Hub </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#" onclick="scrollToAbout()">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="fooddonateform.php">Donate</a></li>
+                <li><a href="profile.php">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        function scrollToAbout() {
+            var aboutSection = document.getElementById("about-us");
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+    <section class="banner">
+        <!-- <a href="fooddonateform.php">Donate Food</a> -->
+    </section>
+    <div class="content">
+        <center>
+            <p style="font-size: 18px;">
+                “FeedTheHungryHub: A Paradigm of Compassion and Sustainable Change”
+            </p>
+        </center>
+
+    </div>
+    <div class="photo">
+        <br>
+        <p class="title">"Welcome to <u> Feed-The-Hungry Hub</u>!!"</p>
+        <br>
+        <p style="font-size: 28px; text-align: center;">Look what we can do together.</p>
+        <br>
+        <div class="wrapper">
+            <div class="box"><img src="img/p2.jpeg" alt=""></div>
+            <div class="box"><img src="img/p4.jpeg" alt=""></div>
+            <div class="box"><img src="img/p3.jpeg" alt=""></div>
+        </div>
+        <br>
+    </div>
+
+    <div id="about-us" class="ser">
+
+        <style>
+            .coverc {
+                width: 100%;
+                height: 400px;
+                background: url('img/about3.jpg')no-repeat;
+                background-size: cover;
+                display: grid;
+                place-items: center;
+                padding-top: 8rem;
+
+            }
+
+            .title {
+                font-size: 38px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .para p {
+                font-size: 23px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            @media (max-width: 767px) {
+                .para p {
+                    font-size: 16px;
+                }
+
+                #pptslide {
+                    height: 200px;
+                    width: 300px;
+
+                }
+
+                #map {
+                    height: 200px;
+                    width: 300px;
+                }
+
+                #overview {
+                    height: 200px;
+                    width: 300px;
+                }
+
+                .title {
+                    font-size: 28px;
+                    margin: 10px;
+                    text-align: center;
+                    align-items: center;
+                }
+
+
+            }
+        </style>
+        <br>
+        <br>
+        <br>
+        <p class="heading">About us</p>
+
+        <div class="para">
+            <p>"FeedTheHungryHub: A Paradigm of Compassion and Sustainable
+                Change" is a small step towards a significant transformation. By leveraging
+                technology, empathy, and collaboration, we aspire to make a lasting impact on
+                reducing food wastage and alleviating hunger. Our commitment to this endeavor
+                is driven by the belief that together, we can create a more compassionate and
+                sustainable world.</p>
+        </div>
+        <br>
+        <br>
+        <div class="map" style="  text-align: center; padding-bottom: 50px;">
+            <p style=" font-size:30px ;"> Our Location </p>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4550251959963!2d78.7135413750113!3d17.437922183457903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb742656dba81b%3A0xcbc405bcc14fd085!2sACE%20Engineering%20College!5e0!3m2!1sen!2sin!4v1699547087844!5m2!1sen!2sin"
+                width="777" height="473" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+    </div>
+
+    <div class="deli" style="display: grid;">
+        <!-- <p class="heading">DOOR PICKUP</p> -->
+        <br>
+        <p class="para">"Your donate will be immediately collected and sent to needy people "</p>
+        <img src="img/delivery.gif" alt="" style="margin-left:auto; margin-right: auto;">
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+            <p class="about">
+                <span> About us</span>The primary objective of this project is to minimize food wastage while ensuring
+                that the needy have access to nourishing meals. We believe in harnessing
+                technology for the betterment of society, and this project serves as an
+                embodiment of that belief.
+            </p>
+        </div>
+
+
+        <div class="footer-center col-md-4 col-sm-6">
+            <div>
+                <p><span> Contact</span> </p>
+
+            </div>
+            <div>
+
+                <p> (+91) 123 456 7890</p>
+
+            </div>
+            <div>
+                <p><a href="#"> feedthehungryhub@gmail.com</a></p>
+            </div>
+
+            <div class="sociallist">
+                <ul class="social">
+                    <li><a href="https://www.facebook.com"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+                    <li><a href="https://twitter.com"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+                    <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"
+                                style="font-size:50px;color: black;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+            <h2>
+                <span1>Feed</span1>The<span>Hungry</span>Hub
+            </h2>
+            <p class="menu">
+                <a href="#"> Home</a> |
+                <a href="about.html"> About</a> |
+                <a href="profile.php"> Profile</a> |
+                <a href="contact.html"> Contact</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

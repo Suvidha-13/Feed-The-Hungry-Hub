@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed-The-Hungry-Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;0,800;1,400;1,600&display=swap');
+
+    body {
+        background: url('https://www.thestatesman.com/wp-content/uploads/2017/08/1492350336-w.jpg') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .box {
+        backdrop-filter: blur(20px);
+        /* Adjust the blur amount as needed */
+        background: rgb(255, 255, 255);
+        /* Adjust the background color and opacity */
+        border-radius: 10px;
+        /* Adjust the border radius as needed */
+        padding: 100px;
+        /* Adjust the padding as needed */
+    }
+
+    .logo {
+        font-size: 35px;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        white-space: nowrap;
+        /* Prevent line breaks */
+    }
+
+    .subtitle {
+        font-size: 40px;
+        /* Adjust the font size */
+        color: #062bc1;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+        /* Add some margin for separation */
+    }
+
+    .para {
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 20px;
+        background: #062bc1;
+        padding: 10px 30px;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 10px auto 10px auto;
+        color: #fff;
+        letter-spacing: 2px;
+        transition: 0.2s;
+    }
+
+    a:hover {
+        background-color: #000000;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <p class="logo"> Welcome to <b style="color: #0030ee; ">Feed</b><b style="color: #000000; ">-The-</b><b
+                style="color: #0033ff; ">Hungry</b><b style="color: #000000; ">-Hub</b></p>
+
+        <div class="login-section">
+            <p class="para"> Login as</p>
+            <div class="log">
+                <a href="signup.php">User</a>
+                <a href="admin/signup.php">Admin</a>
+                <a href="delivery/deliverysignup.php" id="delivery">Volunteer</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
