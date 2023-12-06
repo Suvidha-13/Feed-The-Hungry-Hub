@@ -10,7 +10,7 @@ if (isset($_POST['sign'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $location = $_POST['district'];
+    $location = $_POST['city'];
     $address = $_POST['address'];
 
     $pass = password_hash($password, PASSWORD_DEFAULT);
@@ -116,37 +116,20 @@ if (isset($_POST['sign'])) {
             <div class="input-field">
                 <!-- <label for="district">Location:</label> -->
                 <!-- <br> -->
-                <select id="district" name="district" style="padding:10px; padding-left: 20px;">
-                    <option value="adilabad">Adilabad</option>
-                    <option value="bhupalpally">Bhupalpally</option>
-                    <option value="jagtial">Jagtial</option>
-                    <option value="jangaon">Jangaon</option>
-                    <option value="jayashankar">Jayashankar</option>
-                    <option value="kamareddy">Kamareddy</option>
+                <select id="city" name="city" style="padding: 10px; padding-left: 20px;">
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="secunderabad">Secunderabad</option>
+                    <option value="warangal">Warangal</option>
+                    <option value="nizamabad">Nizamabad</option>
                     <option value="karimnagar">Karimnagar</option>
                     <option value="khammam">Khammam</option>
-                    <option value="komaram-bheem">Komaram Bheem</option>
-                    <option value="mahabubabad">Mahabubabad</option>
-                    <option value="mahabubnagar">Mahabubnagar</option>
-                    <option value="mancherial">Mancherial</option>
-                    <option value="medak">Medak</option>
-                    <option value="medchal">Medchal</option>
-                    <option value="nagarkurnool">Nagarkurnool</option>
-                    <option value="nalgonda">Nalgonda</option>
-                    <option value="nirmal">Nirmal</option>
-                    <option value="nizamabad">Nizamabad</option>
-                    <option value="peddapalli">Peddapalli</option>
-                    <option value="rajanna-sircilla">Rajanna Sircilla</option>
-                    <option value="ranga-reddy">Ranga Reddy</option>
-                    <option value="sangareddy">Sangareddy</option>
-                    <option value="siddipet">Siddipet</option>
+                    <option value="ramagundam">Ramagundam</option>
+                    <option value="mahbubnagar">Mahbubnagar</option>
                     <option value="suryapet">Suryapet</option>
-                    <option value="vikarabad">Vikarabad</option>
-                    <option value="wanaparthy">Wanaparthy</option>
-                    <option value="warangal-rural">Warangal Rural</option>
-                    <option value="warangal-urban">Warangal Urban</option>
-                    <option value="yadadri-bhuvanagiri">Yadadri Bhuvanagiri</option>
+                    <option value="siddipet">Siddipet</option>
+                    <!-- Add more cities as needed -->
                 </select>
+
 
 
                 <!-- <input type="password" class="password" placeholder="Create a password" required> -->

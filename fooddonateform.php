@@ -13,11 +13,11 @@ if (isset($_POST['submit'])) {
     $category = $_POST['image-choice'];
     $quantity = mysqli_real_escape_string($connection, $_POST['quantity']);
     $phoneno = mysqli_real_escape_string($connection, $_POST['phoneno']);
-    $district = mysqli_real_escape_string($connection, $_POST['district']);
+    $city = mysqli_real_escape_string($connection, $_POST['city']);
     $address = mysqli_real_escape_string($connection, $_POST['address']);
     $name = mysqli_real_escape_string($connection, $_POST['name']);
 
-    $query = "insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity) values('$emailid','$foodname','$meal','$category','$phoneno','$district','$address','$name','$quantity')";
+    $query = "insert into food_donations(email,food,type,category,phoneno,location,address,name,quantity) values('$emailid','$foodname','$meal','$category','$phoneno','$city','$address','$name','$quantity')";
     $query_run = mysqli_query($connection, $query);
     if ($query_run) {
         echo '<script type="text/javascript">alert("data saved")</script>';
@@ -38,10 +38,10 @@ if (isset($_POST['submit'])) {
     <title>Feed-The-Hungry-Hub</title>
     <link rel="stylesheet" href="loginstyle.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body style="background-color: #06C167;">
+<body style="background-color: #5b92e5;">
 
     <header>
         <div class="logo"> <b style="color: #062bc1;"> Feed </b> The <b style="color: #4565e6;"> Hungry </b> Hub </div>
@@ -77,13 +77,10 @@ if (isset($_POST['submit'])) {
         }
     </script>
 
-    <div class="container">
-        <div class="regformf">
+    <!-- <div class="container" style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between;">
+        <div class="regformf" style="width: 48%; box-sizing: border-box; padding: 20px;">
             <form action="" method="post">
-                <p class="logo"><b style="color: #062bc1;"> Feed </b> The <b style="color: #4565e6;"> Hungry </b> Hub
-                </p>
-
-                <div class="input">
+            <div class="input">
                     <label for="foodname"> Food Name:</label>
                     <input type="text" id="foodname" name="foodname" required />
                 </div>
@@ -122,10 +119,11 @@ if (isset($_POST['submit'])) {
                     <label for="quantity">Quantity:(number of person /kg)</label>
                     <input type="text" id="quantity" name="quantity" required />
                 </div>
-                <b>
-                    <p style="text-align: center;">Contact Details</p>
-                </b>
-                <div class="input">
+            </form>
+        </div>
+        <div class="regformf" style="width: 48%; box-sizing: border-box; padding: 20px;">
+            <form action="" method="post">
+            <div class="input">
                     <div>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" value="<?php echo "" . $_SESSION['name']; ?>"
@@ -138,8 +136,22 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="input">
                     <label for="location"></label>
-                    <label for="district">District:</label>
-                    <select id="district" name="district" style="padding:10px;">
+                    <label for="city">City:</label>
+                    <select id="city" name="city" style="padding: 10px;">
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="secunderabad">Secunderabad</option>
+                        <option value="warangal">Warangal</option>
+                        <option value="nizamabad">Nizamabad</option>
+                        <option value="karimnagar">Karimnagar</option>
+                        <option value="khammam">Khammam</option>
+                        <option value="ramagundam">Ramagundam</option>
+                        <option value="mahbubnagar">Mahbubnagar</option>
+                        <option value="suryapet">Suryapet</option>
+                        <option value="siddipet">Siddipet</option>
+                        <!-- Add more cities as needed -->
+                    </select>
+
+                    <!-- <select id="district" name="district" style="padding:10px;">
                         <option value="adilabad">Adilabad</option>
                         <option value="bhupalpally">Bhupalpally</option>
                         <option value="jagtial">Jagtial</option>
@@ -169,13 +181,130 @@ if (isset($_POST['submit'])) {
                         <option value="warangal-rural">Warangal Rural</option>
                         <option value="warangal-urban">Warangal Urban</option>
                         <option value="yadadri-bhuvanagiri">Yadadri Bhuvanagiri</option>
-                    </select>
-
+                    </select> -->
+<!-- 
                     <label for="address" style="padding-left: 10px;">Address:</label>
                     <input type="text" id="address" name="address" required /><br>
                 </div>
+            </form>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button type="submit" name="submit">Submit</button>
+    </div> --> 
+
+
+    <div class="container" style="max-width: px; margin: 0 auto;">
+        <div class="regformf" style="width: 800px; box-sizing: border-box; padding: 20px;">
+            <form action="" method="post" style="width: 700px;">
+                <p class="logo"><b style="color: #062bc1;"> Feed </b> The <b style="color: #4565e6;"> Hungry </b> Hub
+                </p>
+
+                <div class="input">
+                    <label for="foodname"> Food Name:</label>
+                    <input type="text" id="foodname" name="foodname" required />
+                    <br>
+                </div>
+
+                <div class="radio">
+                    <label for="meal">Meal type : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="radio" name="meal" id="veg" value="veg" required />
+                    <label for="veg" style="padding-right: 40px;">Veg</label>
+                    <input type="radio" name="meal" id="Non-veg" value="Non-veg">
+                    <label for="Non-veg">Non-veg</label>
+
+                </div>
+                <br>
+                <div class="input">
+                    <label for="food">Select the Category:</label>
+                    <br><br>
+                    <div class="image-radio-group">
+                        <input type="radio" id="raw-food" name="image-choice" value="raw-food">
+                        <label for="raw-food">
+                            <img src="img/raw-food.jpg" alt="raw-food">
+                        </label>
+                        <input type="radio" id="cooked-food" name="image-choice" value="cooked-food">
+                        <label for="cooked-food">
+                            <img src="img/cooked-food.jpg" alt="cooked-food">
+                        </label>
+                        <input type="radio" id="packed-food" name="image-choice" value="packed-food">
+                        <label for="packed-food">
+                            <img src="img/packed-food.jpg" alt="packed-food">
+                        </label>
+                    </div>
+                    <br>
+                </div>
+                <div class="input">
+                    <label for="quantity">Quantity: (Count / Quantity in kg)</label>
+                    <input type="text" id="quantity" name="quantity" required />
+                </div>
+                <b>
+                    <p style="text-align: center; text-decoration: underline;"> <u>Contact Details</u> </p>
+                </b>
+                <div class="input">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="<?php echo "" . $_SESSION['name']; ?>" required />
+                    </div>
+                    <div>
+                        <label for="phoneno">PhoneNo:</label>
+                        <input type="text" id="phoneno" name="phoneno" maxlength="10" pattern="[0-9]{10}" required />
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="location"></label>
+                    <label for="city">City: </label>
+                    <select id="city" name="city" style="padding: 10px; width: 700px; height: 60px; border-radius: 5px; font-size: 16px;">
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="secunderabad">Secunderabad</option>
+                        <option value="warangal">Warangal</option>
+                        <option value="nizamabad">Nizamabad</option>
+                        <option value="karimnagar">Karimnagar</option>
+                        <option value="khammam">Khammam</option>
+                        <option value="ramagundam">Ramagundam</option>
+                        <option value="mahbubnagar">Mahbubnagar</option>
+                        <option value="suryapet">Suryapet</option>
+                        <option value="siddipet">Siddipet</option>
+                        <!-- Add more cities as needed -->
+                    </select>
+
+                    <!-- <select id="district" name="district" style="padding:10px;">
+                        <option value="adilabad">Adilabad</option>
+                        <option value="bhupalpally">Bhupalpally</option>
+                        <option value="jagtial">Jagtial</option>
+                        <option value="jangaon">Jangaon</option>
+                        <option value="jayashankar">Jayashankar</option>
+                        <option value="kamareddy">Kamareddy</option>
+                        <option value="karimnagar">Karimnagar</option>
+                        <option value="khammam">Khammam</option>
+                        <option value="komaram-bheem">Komaram Bheem</option>
+                        <option value="mahabubabad">Mahabubabad</option>
+                        <option value="mahabubnagar">Mahabubnagar</option>
+                        <option value="mancherial">Mancherial</option>
+                        <option value="medak">Medak</option>
+                        <option value="medchal">Medchal</option>
+                        <option value="nagarkurnool">Nagarkurnool</option>
+                        <option value="nalgonda">Nalgonda</option>
+                        <option value="nirmal">Nirmal</option>
+                        <option value="nizamabad">Nizamabad</option>
+                        <option value="peddapalli">Peddapalli</option>
+                        <option value="rajanna-sircilla">Rajanna Sircilla</option>
+                        <option value="ranga-reddy">Ranga Reddy</option>
+                        <option value="sangareddy">Sangareddy</option>
+                        <option value="siddipet">Siddipet</option>
+                        <option value="suryapet">Suryapet</option>
+                        <option value="vikarabad">Vikarabad</option>
+                        <option value="wanaparthy">Wanaparthy</option>
+                        <option value="warangal-rural">Warangal Rural</option>
+                        <option value="warangal-urban">Warangal Urban</option>
+                        <option value="yadadri-bhuvanagiri">Yadadri Bhuvanagiri</option>
+                    </select> -->
+                    <br><br>
+                    <label for="address" >Address:</label>
+                    <input type="text" id="address" name="address" required /><br>
+                </div>
                 <div class="btn">
-                    <button type="submit" name="submit"> submit</button>
+                    <button type="submit" name="submit">Submit</button>
                 </div>
             </form>
         </div>
@@ -203,17 +332,15 @@ if (isset($_POST['submit'])) {
 
             </div>
             <div>
-                <p><a href="#"> feedthehungryhub@gmail.com</a></p>
+            <p><a href="mailto:feedthehungryhub@gmail.com">feedthehungryhub@gmail.com</a></p>
             </div>
 
             <div class="sociallist">
                 <ul class="social">
-                    <li><a href="https://www.facebook.com"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
-                    <li><a href="https://twitter.com"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
-                    </li>
-                    <li><a href="https://www.instagram.com"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
-                    <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"
-                                style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook" style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://twitter.com"><i class="fa-brands fa-x-twitter" style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram" style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp" style="font-size:50px;color: black;"></i></a></li>
                 </ul>
             </div>
         </div>

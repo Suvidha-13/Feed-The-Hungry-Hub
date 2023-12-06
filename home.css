@@ -202,13 +202,13 @@ header {
     font-weight: 500;
     margin-top: 10px;
     color: #fff;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     transition: 0.2s;
 }
 
-.banner a:hover {
+/* .banner a:hover {
     letter-spacing: 6px;
-}
+} */
 
 .msg {
     height: 300px;
@@ -438,6 +438,6 @@ header {
     text-decoration-color: #4565e6;
 }
 
-.heading:hover {
-    letter-spacing: 3px;
-}
+/* .heading:hover {
+    letter-spacing: 0px;
+} */

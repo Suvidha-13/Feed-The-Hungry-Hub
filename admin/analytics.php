@@ -164,7 +164,7 @@ if ($_SESSION['name'] == '') {
                 <br>
                 <br>
 
-                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                <canvas id="userChart" style="width:100%;max-width:600px"></canvas>
                 <br>
                 <canvas id="donateChart" style="width:100%;max-width:600px"></canvas>
 
@@ -179,55 +179,35 @@ if ($_SESSION['name'] == '') {
                     $female = $ro2['count'];
                     $male = $row['count'];
 
-                    $q3 = "SELECT count(*) as count FROM food_donations where location=\"hyderabad\"";
-                    $res3 = mysqli_query($connection, $q3);
-                    $ro3 = mysqli_fetch_assoc($res3);
-                    $hyderabad = $ro3['count'];
-
-                    $q4 = "SELECT count(*) as count FROM food_donations where location=\"warangal\"";
-                    $res4 = mysqli_query($connection, $q4);
-                    $ro4 = mysqli_fetch_assoc($res4);
-                    $warangal = $ro4['count'];
-
-                    $q5 = "SELECT count(*) as count FROM food_donations where location=\"nizamabad\"";
-                    $res5 = mysqli_query($connection, $q5);
-                    $ro5 = mysqli_fetch_assoc($res5);
-                    $nizamabad = $ro5['count'];
-
-                    $q6 = "SELECT count(*) as count FROM food_donations where location=\"khammam\"";
-                    $res6 = mysqli_query($connection, $q6);
-                    $ro6 = mysqli_fetch_assoc($res6);
-                    $khammam = $ro6['count'];
-
-                    $q7 = "SELECT count(*) as count FROM food_donations where location=\"karimnagar\"";
-                    $res7 = mysqli_query($connection, $q7);
-                    $ro7 = mysqli_fetch_assoc($res7);
-                    $karimnagar = $ro7['count'];
+                    $cities = ["Hyderabad", "Secunderabad", "Warangal", "Nizamabad", "Karimnagar", "Khammam", "Ramagundam", "Mahbubnagar", "Suryapet", "Siddipet"];
+                    $cityCounts = array();
+                    foreach ($cities as $city) {
+                        $query = "SELECT count(*) as count FROM food_donations WHERE location='$city'";
+                        $result = mysqli_query($connection, $query);
+                        $row = mysqli_fetch_assoc($result);
+                        $cityCounts[$city] = $row['count'];
+                    }
                     ?>
-                    var xValues = ["Male", "Female"];
-                    var xplace = ["Hyderabad", "Warangal", "Nizamabad", "Khammam", "Karimnagar"];
-                    var yplace = [
-                        <?php echo json_encode($hyderabad, JSON_HEX_TAG); ?>,
-                        <?php echo json_encode($warangal, JSON_HEX_TAG); ?>,
-                        <?php echo json_encode($nizamabad, JSON_HEX_TAG); ?>,
-                        <?php echo json_encode($khammam, JSON_HEX_TAG); ?>,
-                        <?php echo json_encode($karimnagar, JSON_HEX_TAG); ?>
-                    ];
-                    var yValues = [
+
+                    var xUsers = ["Male", "Female"];
+                    var yUsers = [
                         <?php echo json_encode($male, JSON_HEX_TAG); ?>,
-                        <?php echo json_encode($female, JSON_HEX_TAG); ?>,
-                        30
+                        <?php echo json_encode($female, JSON_HEX_TAG); ?>
                     ];
+
+                    var xDonates = <?php echo json_encode($cities, JSON_HEX_TAG); ?>;
+                    var yDonates = <?php echo json_encode(array_values($cityCounts), JSON_HEX_TAG); ?>;
+
                     var barColors = ["#06C167", "blue"];
                     var bar = ["#06C167", "blue", "red"];
 
-                    new Chart("myChart", {
+                    new Chart("userChart", {
                         type: "bar",
                         data: {
-                            labels: xValues,
+                            labels: xUsers,
                             datasets: [{
                                 backgroundColor: barColors,
-                                data: yValues
+                                data: yUsers
                             }]
                         },
                         options: {
@@ -242,10 +222,10 @@ if ($_SESSION['name'] == '') {
                     new Chart("donateChart", {
                         type: "bar",
                         data: {
-                            labels: xplace,
+                            labels: xDonates,
                             datasets: [{
                                 backgroundColor: bar,
-                                data: yplace
+                                data: yDonates
                             }]
                         },
                         options: {
@@ -257,8 +237,6 @@ if ($_SESSION['name'] == '') {
                         }
                     });
                 </script>
-
-
             </div>
         </div>
     </section>

@@ -130,6 +130,12 @@ if ($_SESSION['name'] == '') {
                         <option value="hyderabad">Hyderabad</option>
                         <option value="warangal">Warangal</option>
                         <option value="nizamabad">Nizamabad</option>
+                        <option value="karimnagar">Karimnagar</option>
+                        <option value="khammam">Khammam</option>
+                        <option value="ramagundam">Ramagundam</option>
+                        <option value="mahbubnagar">Mahbubnagar</option>
+                        <option value="suryapet">Suryapet</option>
+                        <option value="siddipet">Siddipet</option>
                         <!-- Add more cities as needed -->
                     </select>
                     <input type="submit" value="Get Details">

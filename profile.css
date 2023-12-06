@@ -39,7 +39,7 @@
 th {
     position: sticky;
     top: 0px;
-    background-color: #284feb;
+    background-color: #97acff;
 }
 
 /* th,td{
@@ -55,7 +55,7 @@ th {
 .table thead tr th {
     font-size: 14px;
     font-weight: medium;
-    letter-spacing: 0.35px;
+    /* letter-spacing: 0.35px; */
     opacity: 1;
     padding: 12px;
     vertical-align: top;
@@ -88,7 +88,7 @@ th {
     .table thead tr th {
         font-size: 14px;
         font-weight: medium;
-        letter-spacing: 0.35px;
+        /* letter-spacing: 0.35px; */
         opacity: 1;
         padding: 5px;
     }

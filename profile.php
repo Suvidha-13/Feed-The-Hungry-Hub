@@ -16,7 +16,7 @@ if ($_SESSION['name'] == '') {
     <title>Feed-The-Hungry-Hub</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -79,7 +79,7 @@ if ($_SESSION['name'] == '') {
                 <!-- <p style="font-family: 'Times New Roman', Times, serif;">gender  :<?php echo "" . $_SESSION['gender']; ?> </p><br>  -->
 
                 <a href="logout.php"
-                    style="float: left;margin-top: 6px ;border-radius:5px; background-color: #ff0000; color: white;padding: ;padding-left: 10px;padding-right: 10px;">Logout</a>
+                    style="float: left;margin-top: 6px ;border-radius:5px; background-color: #4565e6; color: white;padding: ;padding-left: 10px;padding-right: 10px;">Logout</a>
             </div>
             <br>
             <br>
@@ -118,6 +118,52 @@ if ($_SESSION['name'] == '') {
             </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+            <p class="about">
+                <span> About us</span>The primary objective of this project is to minimize food wastage while ensuring
+                that the needy have access to nourishing meals. We believe in harnessing
+                technology for the betterment of society, and this project serves as an
+                embodiment of that belief.
+            </p>
+        </div>
+
+
+        <div class="footer-center col-md-4 col-sm-6">
+            <div>
+                <p><span> Contact</span> </p>
+
+            </div>
+            <div>
+
+                <p> (+91) 123 456 7890</p>
+
+            </div>
+            <div>
+                <p><a href="mailto:feedthehungryhub@gmail.com">feedthehungryhub@gmail.com</a></p>
+            </div>
+
+            <div class="sociallist">
+                <ul class="social">
+                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook" style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://twitter.com"><i class="fa-brands fa-x-twitter" style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram" style="font-size:50px;color: black;"></i></a></li>
+                    <li><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp" style="font-size:50px;color: black;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+            <h2>
+                <span1>Feed</span1>The<span>Hungry</span>Hub
+            </h2>
+            <p class="menu">
+                <a href="#"> Home</a> |
+                <a href="about.html"> About</a> |
+                <a href="profile.php"> Profile</a> |
+                <a href="contact.html"> Contact</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

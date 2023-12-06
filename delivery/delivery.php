@@ -97,7 +97,7 @@ $id = $_SESSION['Did']; // Now it's safe to access 'Did'
     </h2>
 
     <div class="itm">
-        <img src="../img/delivery.gif" alt="" width="400" height="400">
+        <img src="../img/volunteer.jpg" alt="" width="400" height="400">
     </div>
 
     <div class="get">
